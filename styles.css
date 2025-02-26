@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#map1 {
+    z-index: 2;
+    width: 50%;
+    overflow: hidden;
+}
+
+#map2 {
+    z-index: 1;
+}
+
+#slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 5px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: ew-resize;
+    z-index: 3;
+}
+/* Ajusta el contenedor del menú de Geoman */
+.leaflet-pm-toolbar {
+    display: grid !important;  /* Organiza los botones en una cuadrícula */
+    grid-template-columns: repeat(3, auto);  /* 3 botones por fila */
+    gap: 5px !important;  /* Espacio entre botones */
+    background: rgba(255, 255, 255, 0.95) !important;  /* Fondo semitransparente */
+    padding: 10px !important;  /* Espaciado interno */
+    border-radius: 8px !important;  /* Bordes redondeados */
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3) !important;  /* Sombra para mejor visibilidad */
+    max-width: 220px !important;  /* Ancho máximo */
+}
+
+/* Estilo de los botones */
+.leaflet-pm-toolbar .leaflet-bar a {
+    width: 45px !important;  /* Tamaño uniforme */
+    height: 45px !important;
+    line-height: 45px !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    border: 1px solid #ccc !important;
+    background: white !important;
+    border-radius: 5px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* Cambia color al pasar el mouse */
+.leaflet-pm-toolbar .leaflet-bar a:hover {
+    background: #f0f0f0 !important;
+    transform: scale(1.1) !important;  /* Efecto de agrandar */
+}
+
+/* Evita que el menú crezca mucho */
+.leaflet-control-container .leaflet-pm-toolbar {
+    max-height: 300px !important;
+    overflow-y: auto !important;  /* Agrega scroll si hay muchos botones */
+}
+
+
+
